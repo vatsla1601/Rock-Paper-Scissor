@@ -5,15 +5,15 @@ import java.util.Random;
 class firstJavaProgram {
     public static void main(String[]args){
         Random rand = new Random();
-        Scanner user_input = new Scanner(System.in);
-        int level = 0, pcScore = 0, uScore = 0;
+        Scanner sc = new Scanner(System.in);
+        int round = 0, pcScore = 0, uScore = 0;
         while(level < 3) {
             System.out.println("(1)Rock\t  (2)Paper\t(3)Scissor");
             System.out.print("Enter your Choice :");
-            int uc = user_input.nextByte();
+            int uc = sc.nextByte();
             int cc = rand.nextInt(3)+1;
             System.out.println("You chose "+ uc);
-            System.out.println("Computer chose "+ cc);
+            System.out.println("Computer choses "+ cc);
             if (gameres(uc, cc) == 2){
                 pcScore++;
                 System.out.println("Computer got it");
@@ -27,7 +27,7 @@ class firstJavaProgram {
                 System.out.println("Something went wrong.");
                 return;
             }
-            level++;
+            round++;
         }
         if (pcScore > uScore){
             System.out.println("Computer Win!");
