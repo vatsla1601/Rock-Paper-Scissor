@@ -6,8 +6,10 @@ class firstJavaProgram {
     public static void main(String[]args){
         Random rand = new Random();
         Scanner sc = new Scanner(System.in);
-        int round = 0, pcScore = 0, uScore = 0;
-        while(level < 3) {
+        int level = 0; pcScore = 0, uScore = 0;
+        System.out.println("Enter the no of rounds you wish to play :");
+        int round = sc.nextInt();
+        while(level < round) {
             System.out.println("(1)Rock\t  (2)Paper\t(3)Scissor");
             System.out.print("Enter your Choice :");
             int uc = sc.nextByte();
